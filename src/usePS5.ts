@@ -67,11 +67,6 @@ function usePS5() {
 
         const values = new Int8Array(data.buffer);
         const buttons = values[7];
-        // const leftStickX = values[1];
-        // const leftStickY = values[4];
-
-        // console.log('Buttons:', buttons.toString(2));
-        // console.log(leftStickX);
 
         const newButtons = {
           x: (buttons & CROSS) === CROSS,
