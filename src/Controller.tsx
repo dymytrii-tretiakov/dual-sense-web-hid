@@ -2,7 +2,6 @@ import usePS5 from './usePS5';
 
 function Controller() {
   const { requestHIDDevice, device, buttons } = usePS5();
-  // console.table(buttons);
 
   return (
     <div
@@ -110,7 +109,7 @@ function Controller() {
           />
           <path
             d="m6235.66,13221.8l40,450c0,131.29 -80,200 -200,220l-430,0c-132.46,0 -250,-90 -240,-210l30,-500l280,-300c0,0 70,-110 210,0c140,110 310,340 310,340zm0,0"
-            fill={buttons?.top ? 'red' : 'none'}
+            fill={buttons.dPad === 0 || buttons.dPad === 1 || buttons.dPad === 7 ? 'red' : 'none'}
             id="cross-up"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -131,7 +130,7 @@ function Controller() {
           />
           <path
             d="m5456.8,12033.28l-40,-450c0,-131.37 80,-200 200,-220l430,0c132.46,0 250,90 240,210l-30,500l-280,300c0,0 -70,110 -210,0c-140,-110 -310,-340 -310,-340zm0,0"
-            fill={buttons?.bottom ? 'red' : 'none'}
+            fill={buttons.dPad === 4 || buttons.dPad === 3 || buttons.dPad === 5 ? 'red' : 'none'}
             id="cross-down"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -152,7 +151,7 @@ function Controller() {
           />
           <path
             d="m6456.33,12276.48l450,-40c131.37,0 200,80 220,200l0,430c0,132.43 -90,250 -210,240l-500,-30l-300,-280c0,0 -110,-70 0,-210c110,-140 340,-310 340,-310zm0,0"
-            fill={buttons?.right ? 'red' : 'none'}
+            fill={buttons.dPad === 2 || buttons.dPad === 1 || buttons.dPad === 3 ? 'red' : 'none'}
             id="cross-right"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -173,7 +172,7 @@ function Controller() {
           />
           <path
             d="m5267.85,13055.31l-450,40c-131.37,0 -200,-80 -220,-200l0,-430c0,-132.42 90,-250 210,-240l500,30l300,280c0,0 110,70 0,210c-110,140 -340,310 -340,310zm0,0"
-            fill={buttons?.left ? 'red' : 'none'}
+            fill={buttons.dPad === 6 || buttons.dPad === 7 || buttons.dPad === 5 ? 'red' : 'none'}
             id="cross-left"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -325,7 +324,7 @@ function Controller() {
           />
           <path
             d="m14695.7,12671.8c0,-281.68 -228.4,-510 -510,-510c-281.72,0 -510,228.32 -510,510c0,281.6 228.28,510 510,510c281.6,0 510,-228.4 510,-510zm0,0"
-            fill={buttons?.square ? 'red' : 'none'}
+            fill={buttons.square ? 'red' : 'none'}
             id="btn-square"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -340,7 +339,7 @@ function Controller() {
           />
           <path
             d="m16935.7,12671.8c0,-281.68 -228.4,-510 -510,-510c-281.72,0 -510,228.32 -510,510c0,281.6 228.28,510 510,510c281.6,0 510,-228.4 510,-510zm0,0"
-            fill={buttons?.circle ? 'red' : 'none'}
+            fill={buttons.circle ? 'red' : 'none'}
             id="btn-circle"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -355,7 +354,7 @@ function Controller() {
           />
           <path
             d="m15795.7,13761.8c0,-281.68 -228.4,-510 -510,-510c-281.72,0 -510,228.32 -510,510c0,281.6 228.28,510 510,510c281.6,0 510,-228.4 510,-510zm0,0"
-            fill={buttons?.triangle ? 'red' : 'none'}
+            fill={buttons.triangle ? 'red' : 'none'}
             id="btn-triangle"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -370,7 +369,7 @@ function Controller() {
           />
           <path
             d="m15795.7,11541.8c0,-281.68 -228.4,-510 -510,-510c-281.72,0 -510,228.32 -510,510c0,281.6 228.28,510 510,510c281.6,0 510,-228.4 510,-510zm0,0"
-            fill={buttons?.x ? 'red' : 'none'}
+            fill={buttons.cross ? 'red' : 'none'}
             id="btn-x"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
