@@ -81,7 +81,7 @@ function Controller() {
           />
           <path
             d="m482.57,621.82l2,-28c0,0 42,-32 101,-43c59,-11 103,1 103,1l5.43,29.18l-211.43,40.82"
-            fill="rgb(0%, 0%, 0%)"
+            fill={buttons.l1 ? 'red' : 'rgb(0%, 0%, 0%)'}
             fillRule="nonzero"
             id="btn-l1"
             transform="matrix(1 0 0 1 0 0)"
@@ -94,7 +94,7 @@ function Controller() {
           />
           <path
             d="m7144.41,13968.59l-55.11,-15.31c-82.89,-22.97 -168.75,25.51 -191.76,108.32l-99.41,357.7c-23.05,82.89 25.46,168.71 108.32,191.79l55.11,15.32c82.89,23 168.75,-25.51 191.8,-108.4l99.37,-357.62c23.05,-82.89 -25.46,-168.79 -108.32,-191.8zm0,0"
-            fill="none"
+            fill={buttons.share ? 'red' : 'none'}
             id="option-1"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -254,16 +254,16 @@ function Controller() {
             fillRule="nonzero"
             id="svg_34"
           />
-          <g id="left-trigger">
+          <g id="l3" transform={`translate(${buttons.lStick.x - 100},${buttons.lStick.y - 100})`}>
             <path
               d="m906.75,1045.21c0,51.68 -41.9,93.58 -93.58,93.58c-51.69,0 -93.59,-41.9 -93.59,-93.58c0,-51.69 41.9,-93.59 93.59,-93.59c51.68,0 93.58,41.9 93.58,93.59"
-              fill="rgb(30.200195%, 30.200195%, 30.200195%)"
+              fill={buttons.l3 ? 'red' : 'rgb(30.200195%, 30.200195%, 30.200195%)'}
               fillRule="nonzero"
               id="svg_35"
             />
             <path
               d="m871.29,1045.21c0,32.1 -26.02,58.12 -58.13,58.12c-32.09,0 -58.11,-26.02 -58.11,-58.12c0,-32.1 26.02,-58.12 58.11,-58.12c32.11,0 58.13,26.02 58.13,58.12"
-              fill="rgb(19.993591%, 19.993591%, 19.993591%)"
+              fill={buttons.l3 ? 'red' : 'rgb(19.993591%, 19.993591%, 19.993591%)'}
               fillRule="nonzero"
               id="svg_36"
             />
@@ -274,16 +274,16 @@ function Controller() {
             fillRule="nonzero"
             id="svg_37"
           />
-          <g id="right-trigger">
+          <g id="r3" transform={`translate(${buttons.rStick.x - 100},${buttons.rStick.y - 100})`}>
             <path
               d="m1377.75,1045.21c0,51.68 -41.9,93.58 -93.58,93.58c-51.69,0 -93.59,-41.9 -93.59,-93.58c0,-51.69 41.9,-93.59 93.59,-93.59c51.68,0 93.58,41.9 93.58,93.59"
-              fill="rgb(30.200195%, 30.200195%, 30.200195%)"
+              fill={buttons.r3 ? 'red' : 'rgb(30.200195%, 30.200195%, 30.200195%)'}
               fillRule="nonzero"
               id="svg_38"
             />
             <path
               d="m1342.29,1045.21c0,32.1 -26.03,58.12 -58.12,58.12c-32.1,0 -58.12,-26.02 -58.12,-58.12c0,-32.1 26.02,-58.12 58.12,-58.12c32.09,0 58.12,26.02 58.12,58.12"
-              fill="rgb(19.993591%, 19.993591%, 19.993591%)"
+              fill={buttons.r3 ? 'red' : 'rgb(19.993591%, 19.993591%, 19.993591%)'}
               fillRule="nonzero"
               id="svg_39"
             />
@@ -291,7 +291,7 @@ function Controller() {
 
           <path
             d="m1640.07,621.82l-2,-28c0,0 -42,-32 -101,-43c-59,-11 -103,1 -103,1l-6.5,31.5l212.5,38.5"
-            fill="rgb(0%, 0%, 0%)"
+            fill={buttons.r1 ? 'red' : 'rgb(0%, 0%, 0%)'}
             fillRule="nonzero"
             id="btn-r1"
           />
@@ -309,7 +309,7 @@ function Controller() {
           />
           <path
             d="m14006.48,13968.59l55.12,-15.31c82.89,-22.97 168.71,25.51 191.68,108.32l99.53,357.7c22.97,82.89 -25.51,168.71 -108.4,191.79l-55.11,15.32c-82.89,23 -168.71,-25.51 -191.8,-108.4l-99.41,-357.62c-22.97,-82.89 25.5,-168.79 108.39,-191.8zm0,0"
-            fill="none"
+            fill={buttons.options ? 'red' : 'none'}
             id="option-2"
             stroke="rgb(70.117188%, 70.117188%, 70.117188%)"
             strokeMiterlimit="10"
@@ -396,18 +396,42 @@ function Controller() {
           />
           <path
             d="m1496.47,412.37c43.98,-25.97 96.6,-27.18 141.84,-0.62c45.24,26.56 27.38,74.68 20.9,117.91l-198.21,0c0,-44.86 -8.5,-91.33 35.48,-117.29z"
-            fill="#000000"
+            fill={buttons.r2 ? 'red' : 'rgb(0%, 0%, 0%)'}
             id="btn-r2"
             stroke="null"
             transform="rotate(10 1564.25 461.016)"
-          />
+          >
+            {/* text white color like 30% use rTrigger from buttons */}
+          </path>
+          <text
+            fill="white"
+            fillRule="nonzero"
+            id="svg_57"
+            transform="matrix(1.25, 0, 0, 1.25, 0, 0)"
+            x="1226.5"
+            y="379"
+            fontSize="50"
+          >
+            {`${buttons.rTrigger}%`}
+          </text>
           <path
             d="m496.56,406.3c43.98,-25.97 96.6,-27.18 141.84,-0.62c45.24,26.56 27.38,74.68 20.9,117.91l-198.21,0c0,-44.86 -8.5,-91.33 35.48,-117.29z"
-            fill="#000000"
+            fill={buttons.l2 ? 'red' : 'rgb(0%, 0%, 0%)'}
             id="btn-l2"
             stroke="null"
             transform="rotate(-10 564.643 454.944)"
           />
+          <text
+            fill="white"
+            fillRule="nonzero"
+            id="svg_59"
+            transform="matrix(1.25, 0, 0, 1.25, 0, 0)"
+            x="418"
+            y="373"
+            fontSize="50"
+          >
+            {`${buttons.lTrigger}%`}
+          </text>
         </g>
       </svg>
     </div>
